@@ -1,9 +1,9 @@
 # B4-1 Mission: AI 도구 학습 - 시스템 관제 자동화 수행 내역서
 
-**작성일**: [DATE]  
+**작성일**: 2026-11-25  
 **환경**: Docker (Ubuntu 22.04), `--privileged` 모드  
-**컨테이너명**: `[CONTAINER_NAME]`  
-**이미지**: `[IMAGE_NAME]`
+**컨테이너명**: `b4-1-container`  
+**이미지**: `b4-1-image`
 
 ---
 
