@@ -1,0 +1,28 @@
+# logrotate 설정 for agent-app
+# /etc/logrotate.d/agent-app 에 설치
+
+[LOG_DIR]/monitor.log {
+    daily
+    rotate 10
+    size 10M
+    compress
+    delaycompress
+    missingok
+    notifempty
+    create 660 [USER_ADMIN] [GROUP_CORE]
+    sharedscripts
+    postrotate
+        systemctl reload cron > /dev/null 2>&1 || true
+    endscript
+}
+
+[LOG_DIR]/monitor-cron.log {
+    daily
+    rotate 7
+    size 5M
+    compress
+    delaycompress
+    missingok
+    notifempty
+    create 660 [USER_ADMIN] [GROUP_CORE]
+}
